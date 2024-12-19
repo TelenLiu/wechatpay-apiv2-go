@@ -1,4 +1,4 @@
-# wxpay 
+# wechatpay-apiv2-go
 
 ![Powered by zch](https://img.shields.io/badge/Powered%20by-zch-blue.svg?style=flat-square) ![Language](https://img.shields.io/badge/language-Go-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
@@ -29,14 +29,7 @@ wxpay 提供了以下的方法：
 ## 安装
 
 ```bash
-$ go get github.com/objcoding/wxpay
-
-```
-
-## go modules
-```cgo
-// go.mod
-require github.com/objcoding/wxpay v1.0.5
+$ go get github.com/TelenLiu/wechatpay-apiv2-go
 
 ```
 
@@ -51,8 +44,8 @@ account2 := wxpay.NewAccount("appid", "mchid", "apiKey", false)
 // 新建微信支付客户端
 client := wxpay.NewClient(account1)
 
-// 设置证书
-account.SetCertData("证书地址")
+// 设置证书 (付款码支付，免证书)
+account.SetCertData("证书地址")  
 
 // 设置支付账户
 client.setAccount(account2)
